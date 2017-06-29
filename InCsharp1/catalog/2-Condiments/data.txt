@@ -1,0 +1,12 @@
+15;Genen Shouyu;24 - 250 ml bottles;15.50
+3;Aniseed Syrup;12 - 550 ml bottles;10.00
+4;Chef Anton's Cajun Seasoning;48 - 6 oz jars;22.00
+44;Gula Malacca;20 - 2 kg bags;19.45
+5;Chef Anton's Gumbo Mix;36 boxes;21.35
+6;Grandma's Boysenberry Spread;12 - 8 oz jars;25.00
+61;Sirop d'érable;24 - 500 ml bottles;28.50
+63;Vegie-spread;15 - 625 g jars;43.90
+65;Louisiana Fiery Hot Pepper Sauce;32 - 8 oz bottles;21.05
+66;Louisiana Hot Spiced Okra;24 - 8 oz jars;17.00
+77;Original Frankfurter grüne Soße;12 boxes;13.00
+8;Northwoods Cranberry Sauce;12 - 12 oz jars;40.00
