@@ -14,9 +14,21 @@ namespace CsharpEvolve
 
             // Load Catalog
             var catalogLoader = new CatalogLoader();
-            var catalog = catalogLoader.LoadCatalog();
 
-            catalog.ToList().ForEach(product => Console.WriteLine($"{product.Id} \t\t{product.Title}\t\t\t\t\t\t{product.Amount}"));
+            var progress = new Progress<Product>(p =>
+            {
+                Console.WriteLine($"{p.Category}\t\t\t | {p.Id} \t|\t{p.Title}\t\t\t|\t\t\t{p.Amount}|");
+            });
+
+            var c = catalogLoader.LoadCatalog(progress).Result;
+
+            var firstProduct = c.First();
+            //var catalog = catalogLoader.LoadCatalog();
+
+            //foreach (var product in catalog)
+            //{
+            //    Console.WriteLine($"{product.Id} \t\t{product.Title}\t\t\t\t\t\t{product.Amount}");
+            //}
 
             // Load Stock
 

@@ -1,0 +1,10 @@
+11;Queso Cabrales;1 kg pkg.;21.00
+12;Queso Manchego La Pastora;10 - 500 g pkgs.;38.00
+31;Gorgonzola Telino;12 - 100 g pkgs;12.50
+32;Mascarpone Fabioli;24 - 200 g pkgs.;32.00
+33;Geitost;500 g;2.50
+59;Raclette Courdavault;5 kg pkg.;55.00
+60;Camembert Pierrot;15 - 300 g rounds;34.00
+69;Gudbrandsdalsost;10 kg pkg.;36.00
+71;Flotemysost;10 - 500 g pkgs.;21.50
+72;Mozzarella di Giovanni;24 - 200 g pkgs.;34.80

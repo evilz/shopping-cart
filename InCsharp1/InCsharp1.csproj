@@ -39,34 +39,40 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.1\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatalogLoader.cs" />
+    <Compile Include="Catalog\Catalog.cs" />
+    <Compile Include="Catalog\CatalogLoader.cs" />
+    <Compile Include="Catalog\ICatalogLoader.cs" />
+    <Compile Include="ShoppingCart\IShoppingCart.cs" />
+    <Compile Include="Pricer\IShoppingCartPricer.cs" />
+    <Compile Include="Catalog\Product.cs" />
+    <Compile Include="Catalog\ProductId.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShoppingCart.cs" />
-    <Compile Include="ShoppingCartUiExtensions.cs" />
+    <Compile Include="ShoppingCart\ShoppingCart.cs" />
+    <Compile Include="UI\ShoppingCartUiExtensions.cs" />
+    <Compile Include="Pricer\SimplePricer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="catalog\1-Beverages\products.csv" />
-    <None Include="catalog\products.csv" />
-    <None Include="northwind.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Data\1-Beverages\products.csv" />
+    <None Include="Catalog\products.csv" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="catalog\1-Beverages\data.txt" />
-    <Content Include="catalog\2-Condiments\data.txt" />
-    <Content Include="catalog\3-Confections\data.txt" />
-    <Content Include="catalog\4-Dairy Product\data.txt" />
-    <Content Include="catalog\5-Cereals\data.txt" />
-    <Content Include="catalog\6-Meat\data.txt" />
-    <Content Include="catalog\7-Produce\data.txt" />
-    <Content Include="catalog\8-Seafood\data.txt" />
-    <Content Include="northwind.xml" />
+    <Content Include="Data\1-Beverages\data.txt" />
+    <Content Include="Data\2-Condiments\data.txt" />
+    <Content Include="Data\3-Confections\data.txt" />
+    <Content Include="Data\4-Dairy Product\data.txt" />
+    <Content Include="Data\5-Cereals\data.txt" />
+    <Content Include="Data\6-Meat\data.txt" />
+    <Content Include="Data\7-Produce\data.txt" />
+    <Content Include="Data\8-Seafood\data.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

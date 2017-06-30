@@ -1,0 +1,13 @@
+16;Pavlova;32 - 500 g boxes;17.45
+19;Teatime Chocolate Biscuits;10 boxes x 12 pieces;9.20
+20;Sir Rodney's Marmalade;30 gift boxes;81.00
+21;Sir Rodney's Scones;24 pkgs. x 4 pieces;10.00
+25;NuNuCa Nuﬂ-Nougat-Creme;20 - 450 g glasses;14.00
+26;Gumb‰r Gummib‰rchen;100 - 250 g bags;31.23
+27;Schoggi Schokolade;100 - 100 g pieces;43.90
+47;Zaanse koeken;10 - 4 oz boxes;9.50
+48;Chocolade;10 pkgs.;12.75
+49;Maxilaku;24 - 50 g pkgs.;20.00
+50;Valkoinen suklaa;12 - 100 g bars;16.25
+62;Tarte au sucre;48 pies;49.30
+68;Scottish Longbreads;10 boxes x 8 pieces;12.50
