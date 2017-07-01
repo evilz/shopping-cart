@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CsharpEvolve
 {
@@ -15,14 +12,26 @@ namespace CsharpEvolve
             // Load Catalog
             var catalogLoader = new CatalogLoader();
 
+            var counter = 0;
             var progress = new Progress<Product>(p =>
             {
-                Console.WriteLine($"{p.Category}\t\t\t | {p.Id} \t|\t{p.Title}\t\t\t|\t\t\t{p.Amount}|");
+                counter++;
+                // log in file 
+                //Console.WriteLine($"| {p.Category,-15} | {p.Id,3} | {p.Title,-35} | {p.Price,15:#####.00}$ |");
+                Console.Clear();
+                Console.WriteLine(counter);
             });
 
-            var c = catalogLoader.LoadCatalog(progress).Result;
+            var catalog = catalogLoader.LoadCatalog(progress).Result;
 
-            var firstProduct = c.First();
+            foreach (var product in catalog)
+            {
+                Console.WriteLine($"| {product.Category,-15} | {product.Id,3} | {product.Title,-35} | {product.Price,15:#####.00}$ |");
+            }
+
+            Console.WriteLine($" TYPE A xx to Add in basket | C to checkout ");
+            Console.Write($" >>  ");
+            var command = Console.ReadLine();
             //var catalog = catalogLoader.LoadCatalog();
 
             //foreach (var product in catalog)

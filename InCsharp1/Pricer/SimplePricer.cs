@@ -6,7 +6,7 @@ namespace CsharpEvolve
     {
         public double ComputePrice(IShoppingCart shoppingCart)
         {
-            return shoppingCart.Sum(p => p.Amount);
+            return shoppingCart.Sum(p => p.Price);
         }
     }
 }

@@ -5,18 +5,18 @@ using System.Text.RegularExpressions;
 
 namespace CsharpEvolve
 {
-    public class Product
+    public class Product : IEquatable<Product>
     {
-        public Product(ProductId id, double amount, string title, string quantityPerUnit, string category)
+        public Product(ProductId id, double price, string title, string quantityPerUnit, string category)
         {
             Id = id;
-            Amount = amount;
+            Price = price;
             Title = title;
             QuantityPerUnit = quantityPerUnit;
             Category = category;
         }
         public ProductId Id { get; }
-        public double Amount { get; }
+        public double Price { get; }
 
         public string Title { get; }
 
@@ -24,19 +24,24 @@ namespace CsharpEvolve
         
         public string Category { get; }
 
-        //ProductID,ProductName,QuantityPerUnit,UnitPrice
-        public static Product FromCsv(string category, string data)
+        public bool Equals(Product other)
         {
-            try
-            {
-                var parts = data.Split(';').ToArray();
-                return new Product(new ProductId(parts[0]), double.Parse(parts[3],CultureInfo.InvariantCulture), parts[1], parts[2], category);
-            }
-            catch (Exception e)
-            {
-                throw new Exception($"Ërror in line {data}", e);
-            }
-           
+            if (ReferenceEquals(null, other)) return false;
+            if (ReferenceEquals(this, other)) return true;
+            return Equals(Id, other.Id);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Product) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return (Id != null ? Id.GetHashCode() : 0);
         }
     }
 }

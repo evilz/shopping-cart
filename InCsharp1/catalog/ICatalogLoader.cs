@@ -5,8 +5,7 @@ namespace CsharpEvolve
 {
     public interface ICatalogLoader
     {
-       // Catalog LoadCatalog();
-
+        // C# 5.0 : Task with progress report
         Task<Catalog> LoadCatalog(IProgress<Product> progress);
     }
 }

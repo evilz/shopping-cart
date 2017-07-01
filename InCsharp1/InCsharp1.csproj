@@ -48,6 +48,14 @@
     <Compile Include="Catalog\Catalog.cs" />
     <Compile Include="Catalog\CatalogLoader.cs" />
     <Compile Include="Catalog\ICatalogLoader.cs" />
+    <Compile Include="Catalog\ProductFactories.cs" />
+    <Compile Include="Order\CheckoutService.cs" />
+    <Compile Include="Order\CreditCard\CreditCardInfo.cs" />
+    <Compile Include="Order\CreditCard\CreditCardOrder.cs" />
+    <Compile Include="Order\Order.cs" />
+    <Compile Include="Order\OrderItem.cs" />
+    <Compile Include="Order\Paypal\PaypalInfo.cs" />
+    <Compile Include="Order\Paypal\PaypalOrder.cs" />
     <Compile Include="ShoppingCart\IShoppingCart.cs" />
     <Compile Include="Pricer\IShoppingCartPricer.cs" />
     <Compile Include="Catalog\Product.cs" />
