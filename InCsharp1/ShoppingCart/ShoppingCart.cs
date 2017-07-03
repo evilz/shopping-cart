@@ -28,7 +28,7 @@ namespace CsharpEvolve
 
         public IShoppingCart RemoveItem(ProductId id)
         {
-            var removedItem = _items.FirstOrDefault(p => p.Id == id);
+            var removedItem = _items.FirstOrDefault(p => Equals(p.Id, id));
             if (removedItem != null)
             {
                 _items.Remove(removedItem);

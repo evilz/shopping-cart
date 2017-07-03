@@ -6,7 +6,8 @@ namespace CsharpEvolve
 {
     public static class ProductFactories
     {
-        public static Product ToProduct(this string data, string category = null)
+        // C# 3.0 Extension method
+        public static Product ParseAsCsvProduct(this string data, string category = null)
         {
             try
             {
