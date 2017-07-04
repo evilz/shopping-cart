@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using CsharpEvolve.Command;
+using CsharpEvolve.Pricer;
 
 namespace CsharpEvolve
 {
@@ -19,7 +20,8 @@ namespace CsharpEvolve
             UI = new ConsoleUi(Console.Out);
             CatalogLoader = new CatalogLoaderWithCache(new CatalogLoader());
 
-            var shoppingCart = new ShoppingCart(new SimplePricer());
+            //var shoppingCart = new ShoppingCart(new SimplePricer());
+            var shoppingCart = new ShoppingCart(new DiscountPricer());
 
             CommandParser = new CommandParser(Console.In);
             CommandManager = new CommandManager(UI,CatalogLoader,shoppingCart );

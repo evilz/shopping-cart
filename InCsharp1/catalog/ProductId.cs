@@ -6,20 +6,12 @@ namespace CsharpEvolve
     {
         public int Value { get; }
 
-        public ProductId(int value)
-        {
-            Value = value;
-        }
+        // C# 7.0 : Expression-bodied constructor
+        public ProductId(int value) => Value = value;
 
-        public ProductId(string value)
-        {
-            Value = int.Parse(value);
-        }
+        public ProductId(string value) => Value = int.Parse(value);
 
-        public override string ToString()
-        {
-            return Value.ToString();
-        }
+        public override string ToString() => Value.ToString();
 
         public bool Equals(ProductId other)
         {
@@ -36,9 +28,6 @@ namespace CsharpEvolve
             return Equals((ProductId) obj);
         }
 
-        public override int GetHashCode()
-        {
-            return Value;
-        }
+        public override int GetHashCode() => Value;
     }
 }

@@ -4,9 +4,10 @@ namespace CsharpEvolve
 {
     public class SimplePricer : IShoppingCartPricer
     {
-        public double ComputePrice(IShoppingCart shoppingCart)
+        public (double cartTotal, double discount, double finalTotal) ComputePrice(IShoppingCart shoppingCart)
         {
-            return shoppingCart.Sum(p => p.Price);
+            var cartTotal = shoppingCart.Sum(p => p.Price);
+            return (cartTotal, 0.0, cartTotal);
         }
     }
 }

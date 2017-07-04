@@ -19,7 +19,7 @@ namespace CsharpEvolve
         public bool TryParse(IEnumerable<ICommand> availableCommands, out ICommand command)
         {
             var input = _input.ReadLine().ToUpperInvariant();
-            command = availableCommands.First(c => c.TryParse(input));
+            command = availableCommands.FirstOrDefault(c => c.TryParse(input));
 
             return command != null;
         }

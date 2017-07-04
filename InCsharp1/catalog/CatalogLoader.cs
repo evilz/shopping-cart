@@ -12,10 +12,7 @@ namespace CsharpEvolve
         private readonly ICatalogLoader _innerLoader;
         private Catalog _cachedCatalog;
 
-        public CatalogLoaderWithCache(ICatalogLoader catalogLoader)
-        {
-            _innerLoader = catalogLoader;
-        }
+        public CatalogLoaderWithCache(ICatalogLoader catalogLoader) => _innerLoader = catalogLoader;
 
         public async Task<Catalog> LoadCatalog(IProgress<Product> progress)
         {
@@ -52,12 +49,12 @@ namespace CsharpEvolve
         {
             get
             {
-                var catalogPath = "../../Data";
-                var dataPath = "data.txt";
+                const string catalogPath = "../../Data";
+                string dataPath = "data.txt";
 
                 // C# 3.0 : LINQ
                 return Directory.GetDirectories(catalogPath)
-                    .Select(dir => Path.Combine(dir, dataPath));
+                                .Select(dir => Path.Combine(dir, dataPath));
             }
         }
         

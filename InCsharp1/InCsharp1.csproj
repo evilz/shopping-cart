@@ -63,6 +63,7 @@
     <Compile Include="Order\OrderItem.cs" />
     <Compile Include="Order\Paypal\PaypalInfo.cs" />
     <Compile Include="Order\Paypal\PaypalOrder.cs" />
+    <Compile Include="Pricer\DiscountPricer.cs" />
     <Compile Include="ShoppingCart\IShoppingCart.cs" />
     <Compile Include="Pricer\IShoppingCartPricer.cs" />
     <Compile Include="Catalog\Product.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShoppingCart\ShoppingCart.cs" />
+    <Compile Include="ShoppingCart\ShoppingCartExt.cs" />
     <Compile Include="UI\ConsoleUi.cs" />
     <Compile Include="Pricer\SimplePricer.cs" />
   </ItemGroup>

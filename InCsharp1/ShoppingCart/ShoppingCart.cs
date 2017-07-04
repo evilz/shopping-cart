@@ -8,13 +8,10 @@ namespace CsharpEvolve
     {
         private readonly IShoppingCartPricer _pricer;
 
-        public ShoppingCart(IShoppingCartPricer pricer) : this(pricer, new List<Product>())
-        {
-           
-        }
+        private readonly IList<Product> _items;
 
-        private IList<Product> _items;
-
+        public ShoppingCart(IShoppingCartPricer pricer) : this(pricer, new List<Product>()) {}
+        
         public ShoppingCart(IShoppingCartPricer pricer, IEnumerable<Product> items)
         {
             _pricer = pricer;
@@ -42,7 +39,8 @@ namespace CsharpEvolve
             return this;
         }
 
-        public double TotalAmount => _pricer.ComputePrice(this);
+        public (double cartTotal, double discount, double finalTotal) TotalAmount => _pricer.ComputePrice(this);
+
         public IEnumerator<Product> GetEnumerator()
         {
             return _items.GetEnumerator();

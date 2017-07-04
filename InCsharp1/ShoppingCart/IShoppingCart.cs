@@ -7,6 +7,6 @@ namespace CsharpEvolve
         IShoppingCart AddItem(Product product);
         IShoppingCart RemoveItem(ProductId id);
         IShoppingCart Clear();
-        double TotalAmount { get; }
+        (double cartTotal, double discount, double finalTotal) TotalAmount { get; }
     }
 }

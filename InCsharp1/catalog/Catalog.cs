@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,10 @@ namespace CsharpEvolve
 
         public Catalog(IEnumerable<Product> items)
         {
-            _items = items.ToDictionary(product => product.Id, product => product);
+            ProductId KeySelector(Product product) => product.Id;
+            Product ElementSelector(Product product) => product;
+
+            _items = items.ToDictionary(KeySelector, ElementSelector);
         }
 
         public Product this[ProductId productId] => _items[productId];

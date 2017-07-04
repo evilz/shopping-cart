@@ -43,5 +43,17 @@ namespace CsharpEvolve
         {
             return (Id != null ? Id.GetHashCode() : 0);
         }
+
+        public void Deconstruct(out string title, out string category, out double price)
+        {
+            title = Title;
+            category = Category;
+            price = Price;
+        }
+
+        public void Deconstruct(out (string title, string category,  double price) tuple )
+        {
+           tuple = (Title,Category,Price);
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace CsharpEvolve.Order
         
         public IEnumerable<OrderItem> OrderItems {get;}
 
-        public double TotalAmount { get; }
+        public (double cartTotal, double discount, double finalTotal) TotalAmount { get; }
 
     }
 }

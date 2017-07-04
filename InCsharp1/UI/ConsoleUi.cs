@@ -29,7 +29,16 @@ namespace CsharpEvolve
             var sb = cart.Aggregate(new StringBuilder(new string('-', 66) + "\n"),
                 (builder, product) => builder.AppendLine($"| {product.Id,5} | {product.Title,-35} | {product.Price,15:#####.00}$ |"));
             sb.AppendLine(new string('-', 66));
-            sb.AppendLine($"TOTAL : {cart.TotalAmount,55:#####.00}$");
+
+            // C# 7.0  tuple destruct
+            (double cartTotal,double discount,double finalTotal) = cart.TotalAmount;
+
+            if (discount > 0)
+            {
+                sb.AppendLine($"sum : {cartTotal,57:#####.00}$");
+                sb.AppendLine($"discount : {discount*-1,52:#####.00}$");
+            }
+            sb.AppendLine($"TOTAL : {finalTotal,55:#####.00}$");
             _output.WriteLine(sb.ToString());
         }
 

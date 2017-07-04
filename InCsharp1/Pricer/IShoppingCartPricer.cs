@@ -2,6 +2,6 @@ namespace CsharpEvolve
 {
     public interface IShoppingCartPricer
     {
-        double ComputePrice(IShoppingCart shoppingCart);
+        (double cartTotal, double discount, double finalTotal) ComputePrice(IShoppingCart shoppingCart);
     }
 }
